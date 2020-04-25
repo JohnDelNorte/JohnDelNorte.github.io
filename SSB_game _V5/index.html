@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Document</title>
+</head>
+
+<body>
+	
+	<div class='converyorBelt'>
+		<div class="fill" id="plasticBottle" draggable="true">
+			<div class="R"></div>
+		</div>
+		<div class="fill" id="coffeeCup" draggable="true">
+			<div class="NR"></div>
+		</div>
+		<div class="fill" id="aluminumCan" draggable="true">
+			<div class="R"></div>
+		</div>
+	</div>
+
+
+	<div class="SSB" id="SSB"></div>
+	<img src="images/plastBottle.jpg" style="display: none">
+	<img src="images/Coors.jpg" style="display: none">
+	<img src="images/Coffee.jpg" style="display: none">
+
+	<div id="simpleModal" class="modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<span id="closeBtn">&times;</span>
+				<h2 id='mHcontent'>modal header</h2>
+			</div>
+			<div class="modal-body">
+				<p>is this item recyclable?</p>
+				<ul id="choices">
+					<li id="recyclable">
+						<button id="R">recyclable</button>
+					</li>
+					<li id="notRecyclable">
+						<button id="NR">not recyclable</button>
+					</li>
+
+				</ul>
+			</div>
+			<div class="modal-footer">
+				<h3>modal footer</h3>
+			</div>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+
+</html>

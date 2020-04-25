@@ -1,0 +1,117 @@
+body
+ {
+  background: black;
+
+
+  height: 100%;
+  width: 100%;
+}
+
+.SSB
+{
+  content: url('images/oldBinCopy.JPG');
+  position: absolute;
+  height: 155px;
+	width: 310px;
+	top: 0px;
+	left:500px;
+	border: 5px white solid;
+  
+}
+
+
+.fill
+{
+
+  position: absolute;
+  height: 140px;
+  width: 47px;
+  top: 5px;
+  left: 5px;
+  cursor: move;
+  display: block;
+
+}
+.fill h1
+{
+  display: none;
+}
+
+.hold {
+  border: solid 5px #ccc;
+}
+
+.empty {
+  display: inline-block;
+  height: 150px;
+  width: 57px;
+  margin: 10px;
+  /* border: solid 3px salmon; */
+  background: white;
+}
+
+.hovered {
+  background: green;
+  border-style: dashed;
+}
+.invisible
+{
+  display:none;
+}
+
+.modal
+{
+    display:none;
+    position: fixed;
+    z-index:1;
+    left:0;
+    top:0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color:rgba(0,0,0,0.5);
+}
+.modal-body
+{
+    padding: 10px 20px;
+}
+.modal-content
+{
+    background-color: white;
+    margin: 20% auto;
+    /* padding: 20px; */
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.17),0 7px 20px 0 rgba(0,0,0,0.2);
+    animation-name: modalopen;
+    animation-duration: 1s;
+}
+
+.modal-header h2, .modal-footer h3
+{
+    margin: 0;
+}
+
+.modal-header
+{
+    background: coral;
+    padding: 15px;
+    color: white;
+
+}
+.modal-footer
+{
+    background: coral;
+    padding: 10px;
+    color: white;
+    text-align:center;
+}
+
+#closeBtn{
+    color:white;
+    float: right;
+    font-size: 30px;
+}
+#closeBtn:hover,.closeBtn:focus{
+    color: black;
+    cursor: pointer;
+}
