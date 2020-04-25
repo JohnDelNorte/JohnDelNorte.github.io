@@ -11,6 +11,7 @@ var nrecBtn = document.getElementById('notRecyclable');
 var currElement=document.getElementById('SSB');
 var pause=false;
 var answer;
+var audio=new Audio('FMB.mp3');
 
 
 
@@ -72,6 +73,7 @@ function dragStart()
 	this.className += ' hold';
 	setTimeout(() => (this.className = 'invisible'), 0);
 	foo = this.id;
+	audio.play();
 }
 
 function dragEnd() 
