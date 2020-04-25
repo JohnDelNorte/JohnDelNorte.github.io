@@ -12,7 +12,7 @@ var currElement=document.getElementById('SSB');
 var pause=false;
 var answer;
 var audio=new Audio('FMB.mp3');
-
+var poop;
 
 
 
