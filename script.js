@@ -1,6 +1,6 @@
 
 
-document.addEventListener('DOMContentLoaded',function(){
+window.onload=function(){
 var items = document.getElementsByClassName('fill');
 var SSB = document.getElementById('SSB');
 var modal=document.getElementById('simpleModal'); 
@@ -146,4 +146,4 @@ function  checkWin()
 	if(flag)
 		location.replace('https://gleece0.wixsite.com/smartslugbin');
 }
-});
+};
