@@ -2,7 +2,6 @@ body
  {
   background: black;
 
-
   height: 100%;
   width: 100%;
 }
@@ -19,15 +18,18 @@ body
   
 }
 
+.box
+{
+  position: absolute;
+  height: 320px;
+  width: 200px;
+  border: 2px black solid;
+  display:block;
+}
 
 .fill
 {
 
-  position: absolute;
-  height: 140px;
-  width: 47px;
-  top: 5px;
-  left: 5px;
   cursor: move;
   display: block;
 
