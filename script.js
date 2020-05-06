@@ -6,38 +6,37 @@ var boxes = document.getElementsByClassName('box');
 var boxes= document.getElementsByClassName('box');
 var SSB = document.getElementById('SSB');
 var modal=document.getElementById('simpleModal'); 
+var modal2=document.getElementById('simpleModal2');
 var modalHeader=document.getElementById('mHcontent');
+var modalBody = document.getElementById('modal-body1');
+var modalBody2= document.getElementById('modal-body2');
+var modalHeader2=document.getElementById('mHcontent2')
 var recBtn = document.getElementById('recyclable');
 var nrecBtn = document.getElementById('notRecyclable');
-var okBtn = document.getElementsByClassName('okay');
+var okBtn = document.getElementById('okay');
 var currElement=document.getElementById('SSB');
 var pause=false;
+var counter =document.getElementById('counter');
 var answer;
-var audio=new Audio('FMB.mp3');
-
-
-
-
-//const picNames=["images/plastBottle.jpg","images/Coffee.jpg","images/Coors.jpg"];
+var beforeText = document.getElementById('before1');
+//var audio=new Audio('FMB.mp3');
 var foo;
+var amtItems=items.length;
 
 
-// Fill listeners
+
+counter.innerHTML=items.length;
+
 for(var i=0; i<items.length; i++)
 {
 	var img = new Image();
-	//img.src=picNames[i];
 	items[i].addEventListener('dragstart', dragStart);
 	items[i].addEventListener('dragend', dragEnd);
 	items[i].active=false;
-	//items[i].style.backgroundImage=`url('${img.src}')`;
-	//items[i].style.height=`${img.height}px`;
-	//items[i].style.width= `${img.width}px`;
 	boxes[i].style.top =`${i*320}px`;
 
 }
 
-// Loop through empty boxes and add listeners
 
   SSB.addEventListener('dragover', dragOver);
   SSB.addEventListener('dragenter', dragEnter);
@@ -46,6 +45,7 @@ for(var i=0; i<items.length; i++)
 
   recBtn.addEventListener('click',closeModal);
   nrecBtn.addEventListener('click',closeModal);
+  okBtn.addEventListener('click',closeModal2);
 
 
 moveBoxes();
@@ -73,7 +73,7 @@ function dragStart()
 	setTimeout(() => (this.className = 'invisible'), 0);
 	foo = this.id;
 	console.log("drag start");
-	audio.play();
+	//audio.play();
 }
 
 function dragEnd() 
@@ -106,9 +106,10 @@ function dragDrop(e)
 	pause = true;
 	console.log('dragDrop');
 	this.className = 'SSB';
-	modalHeader.innerHTML = foo;
-	modal.style.display = "block";
 	currElement = document.getElementById(foo);
+	modalHeader.innerHTML = foo;
+	modalBody.firstElementChild.innerHTML = currElement.nextElementSibling.nextElementSibling.innerHTML;
+	modal.style.display = "block";
 	currElement.style.display = "none";
 
 }
@@ -122,16 +123,30 @@ function closeModal(e)
 	{
 		modal.style.display="none";
 		currElement.style.display="none";
+		modalBody2.firstElementChild.innerHTML=currElement.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML;
+		modalHeader2.innerHTML="correct!";
+		amtItems -=1;
+		counter.innerHTML=amtItems;
 
 	}
 	else
 	{
 		currElement.style.display="block";
 		modal.style.display="none";
+		modalBody2.firstElementChild.innerHTML=currElement.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML;
+		modalHeader2.innerHTML="wrong!";
 	}
+
+	modal2.style.display="block";
 
 	pause=false;
 	foo="";
+
+}
+
+function closeModal2(e)
+{
+	modal2.style.display="none";
 	checkWin();
 }
 

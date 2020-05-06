@@ -27,6 +27,11 @@ body
   display:block;
 }
 
+.box div
+{
+  display:none;
+}
+
 .fill
 {
 
@@ -116,4 +121,20 @@ body
 #closeBtn:hover,.closeBtn:focus{
     color: black;
     cursor: pointer;
+}
+
+.counter
+{
+  position: absolute;
+  padding:10px;
+  border: 5px solid red;
+  background-color: white;
+  top:0px;
+  left:900px;
+  display:block;
+
+}
+.counter h3
+{
+  text-align: center;
 }

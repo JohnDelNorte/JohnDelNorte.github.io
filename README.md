@@ -1,2 +1,0 @@
-# JohnDelNorte.github.io
-myPage

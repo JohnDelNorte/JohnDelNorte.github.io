@@ -13,38 +13,57 @@
 		<div class="box">
 			<img src="images/plastBottle.jpg" class="fill" id="plasticBottle" draggable="true">
 			<div class="R"></div>
+			<div class="beforeText" >Hi, I am a plastic bottle. Am I recyclable?</div>
+			<div class="afterTextWrong">Actually, I am recyclable, but you should make sure I'm empty first!</div>
+			<div class="afterTextCorr">Yes! I am recyclable, and good job!</div>
 		</div>
 
 		<div class="box">
 			<img src="images/cherryPie.jpg" class="fill" id="cherryPie" draggable="true">
 			<div class="NR"></div>
+			<div class="text">Hi, I am a carboard pie carton. Am I recyclable?</div>
+			<div class="afterTextWrong">Actually, I am not recyclable because my cardboard is contaminated with buttery goodness!</div>
+			<div class="afterTextCorr">Yes! I am not recyclable, and good job!</div>
 		</div>
 
 		<div class="box">
 			<img src="images/candyWrapper.jpg" class="fill" id="candyWrapper" draggable="true">
 			<div class="NR"></div>
+			<div class="text">Hi, I am a plastic candy wrapper. Am I recyclable</div>
+			<div class="afterTextWrong">Actually, I am not recyclable because I'm not the right kind of plastic!</div>
+			<div class="afterTextCorr">Yes! I am not recyclable, and good job!</div>
 		</div>
 
 		<div class="box">
 			<img src="images/Coffee.jpg" class="fill" id="coffeeCup" draggable="true">
 			<div class="NR"></div>
+			<div class="text">Hi, I am a paper coffee cup. Am I recyclable?</div>
+			<div class="afterTextWrong">Actually, I am not recyclable because the inside of me is lined with plastic!</div>
+			<div class="afterTextCorr">Yes! I am not recyclable, and good job!</div>
 		</div>
 
 		<div class="box">
 			<img src="images/Coors.jpg" class="fill" id="aluminumCan" draggable="true">
 			<div class="R"></div>
+			<div class="text">Hi, I am an aluminum can. Am I recyclable?</div>
+			<div class="afterTextWrong">Actually, I am recyclable, but you should make sure I'm empty first!</div>
+			<div class="afterTextCorr">Yes! I am recyclable, and good job!</div>
 		</div>
 
 
 	<div class="SSB" id="SSB"></div>
+	<div class="counter">
+		<h3>items remaining: </h3>
+		<h3 id ="counter">0000</h3>
+	</div>
 
 	<div id="simpleModal" class="modal">
 		<div class="modal-content">
 			<div class="modal-header">
 				<h2 id='mHcontent'>modal header</h2>
 			</div>
-			<div class="modal-body">
-				<p>is this item recyclable?</p>
+			<div id="modal-body1" class="modal-body">
+				<p id = "before1">foo</p>
 				<ul id="choices">
 					<li id="recyclable">
 						<button id="R">recyclable</button>
@@ -60,7 +79,24 @@
 			</div>
 		</div>
 	</div>
-	<audio src="FMB.mp3"></audio>
+
+
+	<div id="simpleModal2" class="modal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2 id='mHcontent2'>modal header 2</h2>
+			</div>
+			<div id="modal-body2" class="modal-body">
+				<p>foo</p>
+				<button id ='okay'>okay</button>
+			</div>
+			<div id=modal-footer2 class="modal-footer">
+				<h3></h3>
+			</div>
+		</div>
+	</div>
+
+	<!-- <audio src="FMB.mp3"></audio> -->
 	<script src="script.js"></script>
 </body>
 
