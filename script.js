@@ -1,5 +1,6 @@
 
-const BOXHEIGHT = 320;
+window.onload = function()
+{
 
 var items = document.getElementsByClassName('fill');
 var boxes = document.getElementsByClassName('box');
@@ -183,4 +184,5 @@ function  checkWin()
 {
 	if(boxes.length==0)
 		location.assign('https://docs.google.com/forms/d/e/1FAIpQLSenLLisuJJ3zySVmvuHmVGbMmvkFgeZ8NGz0baD76D3ecfL9Q/viewform?usp=sf_link');
+}
 }
