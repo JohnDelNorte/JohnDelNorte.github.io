@@ -10,12 +10,29 @@
 
 <body>
 
+	<div id="conveyor">
 		<div class="box">
 			<img src="images/plastBottle.jpg" class="fill" id="plasticBottle" draggable="true">
 			<div class="R"></div>
 			<div class="beforeText" >Hi, I am a plastic bottle. Am I recyclable?</div>
 			<div class="afterTextWrong">Actually, I am recyclable, but you should make sure I'm empty first!</div>
 			<div class="afterTextCorr">Yes! I am recyclable, and good job!</div>
+		</div>
+
+		<div class="box">
+			<img src="images/pizzaBox.jpg" class="fill" id="pizzaBox" draggable="true">
+			<div class="NR"></div>
+			<div class="beforeText" >Hi, I am a pizza box. Am I recyclable?</div>
+			<div class="afterTextWrong">A pizza box is not recyclable because of residual grease.</div>
+			<div class="afterTextCorr">Yes! I am not recyclable, and good job!</div>
+		</div>
+
+		<div class="box">
+			<img src="images/noLabelBottle.jpg" class="fill" id="noLabelBottle" draggable="true">
+			<div class="R"></div>
+			<div class="beforeText" >I am a plastic bottle without a label, could I be recyclable?</div>
+			<div class="afterTextWrong">Even though I do not have a label, I am clean and recyclable</div>
+			<div class="afterTextCorr">Yes! I am  recyclable, and good job!</div>
 		</div>
 
 		<div class="box">
@@ -50,8 +67,22 @@
 			<div class="afterTextCorr">Yes! I am recyclable, and good job!</div>
 		</div>
 
+		<div class="box">
+			<img src="images/soapPump.jpg" class="fill" id="soapPump" draggable="true">
+			<div class="NR"></div>
+			<div class="text">Hi, I am an soap bottle. Am I recyclable?</div>
+			<div class="afterTextWrong">Actually, I am not recyclable if you do not rinse me out first.</div>
+			<div class="afterTextCorr">Yes! I am not recyclable, and good job!</div>
+		</div>
+	</div>
+
 
 	<div class="SSB" id="SSB"></div>
+
+	<div id = 'extLink'>
+		<a href = 'https://gleece0.wixsite.com/smartslugbin' >SMART SLUG BIN</a>
+	</div>
+
 	<div class="counter">
 		<h3>items remaining: </h3>
 		<h3 id ="counter">0000</h3>

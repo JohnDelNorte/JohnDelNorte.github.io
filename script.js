@@ -1,19 +1,24 @@
 
-
+const BOXHEIGHT = 320;
 
 var items = document.getElementsByClassName('fill');
 var boxes = document.getElementsByClassName('box');
-var boxes= document.getElementsByClassName('box');
+var conveyor = document.getElementById('conveyor');
+
 var SSB = document.getElementById('SSB');
+
 var modal=document.getElementById('simpleModal'); 
 var modal2=document.getElementById('simpleModal2');
 var modalHeader=document.getElementById('mHcontent');
 var modalBody = document.getElementById('modal-body1');
 var modalBody2= document.getElementById('modal-body2');
 var modalHeader2=document.getElementById('mHcontent2')
+var modalFooter2=document.getElementById('modal-footer2')
 var recBtn = document.getElementById('recyclable');
 var nrecBtn = document.getElementById('notRecyclable');
 var okBtn = document.getElementById('okay');
+
+
 var currElement=document.getElementById('SSB');
 var pause=false;
 var counter =document.getElementById('counter');
@@ -23,17 +28,21 @@ var beforeText = document.getElementById('before1');
 var foo;
 var amtItems=items.length;
 
-
+var cummulativeHeight = 0;
 
 counter.innerHTML=items.length;
 
 for(var i=0; i<items.length; i++)
 {
-	var img = new Image();
 	items[i].addEventListener('dragstart', dragStart);
 	items[i].addEventListener('dragend', dragEnd);
 	items[i].active=false;
-	boxes[i].style.top =`${i*320}px`;
+	boxes[i].style.width = `${boxes[i].firstElementChild.width}px`;
+	boxes[i].style.height = `${boxes[i].firstElementChild.height}px`;
+
+	boxes[i].style.top =`${cummulativeHeight}px`;
+	cummulativeHeight += boxes[i].firstElementChild.height;
+	//boxes[i].style.padding='10px';
 
 }
 
@@ -59,8 +68,10 @@ function moveBoxes()
 			var c = boxes[i].style.top;
 			n= parseInt(c);
 			boxes[i].style.top=`${n-1}px`;
-			if(n<-320)
-				boxes[i].style.top="1600px";
+			if(n<-parseInt(boxes[i].style.height))
+			{
+				boxes[i].style.top=`${cummulativeHeight-parseInt(boxes[i].firstElementChild.height)}px`;
+			}
 		}
 	}
 	setTimeout(moveBoxes,10);
@@ -122,11 +133,25 @@ function closeModal(e)
 	if(answer==currElement.nextElementSibling.className)
 	{
 		modal.style.display="none";
-		currElement.style.display="none";
 		modalBody2.firstElementChild.innerHTML=currElement.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML;
 		modalHeader2.innerHTML="correct!";
 		amtItems -=1;
 		counter.innerHTML=amtItems;
+		conveyor.removeChild(currElement.parentElement); //boxes.length --;
+		cummulativeHeight -= currElement.height;
+		//console.log("removed an item of height: "+currElement.height+" and now cummulative height is: "+cummulativeHeight);
+		modalHeader2.parentElement.style.backgroundColor="green";
+		modalFooter2.style.background="green";
+
+		//perhaps manually position the items. 
+		cummulativeHeight=0;
+		for(var i=0; i<boxes.length; i++)
+		{
+			boxes[i].style.top =`${cummulativeHeight}px`;
+			cummulativeHeight += boxes[i].firstElementChild.height;
+		}
+
+
 
 	}
 	else
@@ -135,6 +160,9 @@ function closeModal(e)
 		modal.style.display="none";
 		modalBody2.firstElementChild.innerHTML=currElement.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML;
 		modalHeader2.innerHTML="wrong!";
+		modalHeader2.parentElement.style.backgroundColor="red";
+		modalFooter2.style.background="red";
+
 	}
 
 	modal2.style.display="block";
@@ -153,12 +181,6 @@ function closeModal2(e)
 
 function  checkWin()
 {
-	var flag=new Boolean(true);
-
-	for(var i=0; i<items.length&&flag; i++)
-		if(items[i].style.display!="none")
-			flag=false;
-	
-	if(flag)
-		location.replace('https://gleece0.wixsite.com/smartslugbin');
+	if(boxes.length==0)
+		location.assign('https://docs.google.com/forms/d/e/1FAIpQLSenLLisuJJ3zySVmvuHmVGbMmvkFgeZ8NGz0baD76D3ecfL9Q/viewform?usp=sf_link');
 }

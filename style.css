@@ -18,6 +18,21 @@ body
   
 }
 
+#extLink
+{
+  border: 5px green solid;
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 1100px;
+  padding: 10px;
+
+}
+#extLink a
+{
+  text-align: center;
+}
+
 .box
 {
   position: absolute;
@@ -103,6 +118,7 @@ body
     background: coral;
     padding: 15px;
     color: white;
+    text-align: center;
 
 }
 .modal-footer
