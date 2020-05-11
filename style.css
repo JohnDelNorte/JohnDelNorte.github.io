@@ -8,10 +8,8 @@ body
 
 .SSB
 {
-  content: url('images/oldBinCopy.jpg');
+  /* content: url('images/oldBinCopy.jpg'); */
   position: absolute;
-  height: 155px;
-	width: 310px;
 	top: 0px;
 	left:500px;
 	border: 5px white solid;
