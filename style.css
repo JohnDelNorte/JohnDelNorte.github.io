@@ -1,6 +1,5 @@
-body
+body /* Added font, width, height, margin, padding, and overflow. -Edited 5/14 by Stephanie*/
  {
-  /*background-image: url("images/UCSC-Engineering-09.jpg");*/
   background: black;
   font-family: "Rubik";
   width: 99%; 
@@ -10,39 +9,37 @@ body
   overflow: hidden;
 }
 
-
-
-#extLink /*For block linking to website*/
+#extLink /*For the block of text linking to SSB website*/ /* Edited font, size, position -Edited 5/14 by Stephanie*/
 {
-  /*border: 5px #0000CD solid;*/
-  /*background-color: white;*/
+  /*border: 5px #0000CD solid;
+  background-color: white;
+  top: 0px;
+  left: 1100px;*/
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
+  font-size: 1.25vw; /* automatically adjusted the font size according to the size of the window -Added 5/14 by Stephanie*/
   background-color: #DAA520;
   display: block;
   position: fixed;
-  z-index: 100px;
-  /*top: 0px;
-  left: 1100px;*/
-  left:315px;
-  bottom:0px;
+  z-index: 100px; /* Z-index is the CSS style that controls how images or divs stack over each other. -Added 5/14 by Stephanie*/
+  left: 315px;
+  bottom: 0px;
   padding: 5px;
   width: 100%;
   height: 5%;
-  font-size: 1.25vw;
 }
 #extLink a
 {
   text-align: center;
 }
 
-.box /* For borders around the conveyor items*/
+.box /* For the borders around the conveyor items*/
 {
   position: absolute;
   height: 320px;
   width: 200px;
   border: 2px black solid;
-  display:block;
+  display: block;
 }
 
 .box div
@@ -81,20 +78,20 @@ body
 }
 .invisible
 {
-  display:none;
+  display: none;
 }
 
 .modal
 {
-    display:none;
+    display: none;
     position: fixed;
-    z-index:1;
-    left:0;
-    top:0;
+    z-index: 1;
+    left: 0;
+    top: 0;
     height: 100%;
     width: 100%;
     overflow: auto;
-    background-color:rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.5);
 }
 .modal-body
 {
@@ -129,7 +126,7 @@ body
     background: coral;
     padding: 10px;
     color: white;
-    text-align:center;
+    text-align: center;
 }
 
 #closeBtn{
@@ -142,38 +139,34 @@ body
     cursor: pointer;
 }
 
-.counter /* For counter block */
+.counter /* For the counter block for items remaining to sort */
 {
-  position: fixed;
-  padding:8px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 18px;
   /*border: 5px solid red;*/
   /*background-color: white;
   background-color: #3CB371;
-  opacity: 0.75;*/
-  top:0px;
-  /*left:900px;*/
-  right:0px;
-  color: green;
-  display:block;
+  opacity: 0.75;
+  left:900px;*/
+  font-family: 'Roboto', sans-serif; /*Adjust font family, size, and placement of the counter -Edited 5/14 by Stephanie*/
+  font-size: 18px;
   text-align: center;
+  top: 0px;
+  right: 0px;
+  position: fixed;
+  padding: 8px;
+  display: block;
 }
 .counter h3
 {
   text-align: center;
-  color: green;
 }
 
-ol {
+ol { /*To change font family and size of ordered lists -Added 5/14 by Stephanie*/
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
 }
 
-div.transbox {
-
+div.transbox { /*To create a transparent box on the side -Added 5/14 by Stephanie*/
   background-color: #ffffff;
-
   opacity: 0.7;
   filter: alpha(opacity=60); /* For IE8 and earlier */
   height:auto;
@@ -183,16 +176,17 @@ div.transbox {
   position: fixed;
 }
 
-div.transbox p {
-  /*font-weight: bold;*/
+div.transbox p { /*To change font family and size of text inside the transparent box on the side -Added 5/14 by Stephanie*/
+
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
+  font-size: 15px;
+  font-size: 1.25vw;
   color: #000000;
   text-align: center;
   padding: 5px;
 }
 
-.SSB /*For Smart Slug Bin Picture*/
+.SSB /*For Smart Slug Bin Picture*/ 
 {
   /* content: url('images/oldBinCopy.jpg'); */
   /*position: absolute;
@@ -200,36 +194,18 @@ div.transbox p {
   left:500px;
   border: 5px white solid;
   */
-  position: fixed;
+  position: fixed; /* Edited the position of the SSB picture. -Edited 5/14 by Stephanie*/
   top: 0px;
   left:315px;
   height: 100%;
-  width: 100%;
-  object-fit: contain;
-/*
-    width: 100vw;
-    height: auto;
-    max-width: none;
-    max-height: 100vh;
-    object-fit: fill;
-    */
+  width: 90%;
 }
 
-/*<<<<<<< HEAD*/
-/*.contain
-{
-    object-fit: contain;
-=======
-.contain {
-    object-fit: fill;
->>>>>>> eb3657dd2bdd54c80d9514f73ae4171adedfc079*/
-}
-
-.imgbox {
+.imgbox { /*.imgbox and .center-fit are to resize the image to fit the browser window -Added 5/14 by Stephanie*/
     display: grid;
     height: 100%;
 }
-.center-fit {
+.center-fit { /*.imgbox and .center-fit are to resize the image to fit the browser window -Added 5/14 by Stephanie*/
     max-width: 100%;
     max-height: 100vh;
     width: 100vw;
