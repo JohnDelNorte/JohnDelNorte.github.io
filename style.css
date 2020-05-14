@@ -171,18 +171,10 @@ body
   text-align: center;
 }
 
-/*.info h4
-{
-  position: fixed;
-  padding:8px;
+ul {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
-  top:100px;
-  /*left:900px;
-  right:0px;
-  display:block;
-
-}*/
+}
 
 div.transbox {
 
