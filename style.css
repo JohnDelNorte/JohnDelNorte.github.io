@@ -199,6 +199,7 @@ div.transbox p { /*To change font family and size of text inside the transparent
   left:315px;
   height: 100%;
   width: 90%;
+  object-fit: contain;
 }
 
 .imgbox { /*.imgbox and .center-fit are to resize the image to fit the browser window -Added 5/14 by Stephanie*/
