@@ -8,19 +8,7 @@ body
   
 }
 
-.SSB /*For Smart Slug Bin Picture*/
-{
-  /* content: url('images/oldBinCopy.jpg'); */
-  /*position: absolute;
-	top: 0px;
-	left:500px;
-	border: 5px white solid;
-  */
-  position: fixed;
-  top: 0px;
-  left:325px;
-  object-fit: cover;
-}
+
 
 #extLink /*For block linking to website*/
 {
@@ -37,6 +25,7 @@ body
   bottom:0px;
   padding: 5px;
   width: 100%;
+  margin: auto;
 
 }
 #extLink a
@@ -163,12 +152,14 @@ body
   top:0px;
   /*left:900px;*/
   right:0px;
+  color: green;
   display:block;
   text-align: center;
 }
 .counter h3
 {
   text-align: center;
+  color: green;
 }
 
 ol {
@@ -185,7 +176,7 @@ div.transbox {
   height:auto;
   top:0px;
   right:0px;
-  width: 23%;
+  width: 20%;
   position: fixed;
 }
 
@@ -195,4 +186,21 @@ div.transbox p {
   font-size: 18px;
   color: #000000;
   text-align: center;
+  padding: 5px;
+}
+
+.SSB /*For Smart Slug Bin Picture*/
+{
+  /* content: url('images/oldBinCopy.jpg'); */
+  /*position: absolute;
+  top: 0px;
+  left:500px;
+  border: 5px white solid;
+  */
+  position: fixed;
+  top: 0px;
+  left:325px;
+
+.contain {
+    object-fit: contain;
 }

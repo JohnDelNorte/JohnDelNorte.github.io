@@ -30,7 +30,7 @@ var foo;
 var amtItems=items.length;
 
 var cummulativeHeight = 0;
-
+var contain=document.getElementById('contain');;
 counter.innerHTML=items.length;
 
 for(var i=0; i<items.length; i++)
