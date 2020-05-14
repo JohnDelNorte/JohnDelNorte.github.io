@@ -198,6 +198,7 @@ div.transbox {
 
 div.transbox p {
   /*font-weight: bold;*/
+  font-family: 'Roboto', sans-serif;
   font-size: 18px;
   color: #000000;
   text-align: center;
