@@ -19,7 +19,7 @@ body
   background-color: #DAA520;
   display: block;
   position: fixed;
-  z-index: 2px;
+  z-index: 100px;
   /*top: 0px;
   left: 1100px;*/
   left:315px;
