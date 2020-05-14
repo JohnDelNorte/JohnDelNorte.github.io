@@ -203,7 +203,12 @@ div.transbox p {
   left:315px;
 }
 
+<<<<<<< HEAD
 .contain
 {
     object-fit: contain;
+=======
+.contain {
+    object-fit: fill;
+>>>>>>> eb3657dd2bdd54c80d9514f73ae4171adedfc079
 }
