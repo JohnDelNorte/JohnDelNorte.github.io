@@ -201,7 +201,9 @@ div.transbox p {
   position: fixed;
   top: 0px;
   left:315px;
+}
 
-.contain {
+.contain
+{
     object-fit: contain;
 }
