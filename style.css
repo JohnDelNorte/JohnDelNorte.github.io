@@ -3,9 +3,11 @@ body
   /*background-image: url("images/UCSC-Engineering-09.jpg");*/
   background: black;
   font-family: "Rubik";
-  height: 100%;
-  width: 100%;
-  
+  width: 99%; 
+  height: 99%; 
+  margin: 0; 
+  padding: 0;
+  overflow: hidden;
 }
 
 
@@ -203,14 +205,34 @@ div.transbox p {
   left:315px;
   height: 100%;
   width: 100%;
+  object-fit: contain;
+/*
+    width: 100vw;
+    height: auto;
+    max-width: none;
+    max-height: 100vh;
+    object-fit: fill;
+    */
 }
 
 /*<<<<<<< HEAD*/
-.contain
+/*.contain
 {
-    object-fit: fill;
-/*=======
+    object-fit: contain;
+=======
 .contain {
     object-fit: fill;
 >>>>>>> eb3657dd2bdd54c80d9514f73ae4171adedfc079*/
+}
+
+.imgbox {
+    display: grid;
+    height: 100%;
+}
+.center-fit {
+    max-width: 100%;
+    max-height: 100vh;
+    width: 100vw;
+    height: auto;
+    margin: auto;
 }
