@@ -15,9 +15,9 @@ var modalBody = document.getElementById('modal-body1');
 var modalBody2= document.getElementById('modal-body2');
 var modalHeader2=document.getElementById('mHcontent2')
 var modalFooter2=document.getElementById('modal-footer2')
-var recBtn = document.getElementById('recyclable');
-var nrecBtn = document.getElementById('notRecyclable');
-var okBtn = document.getElementById('okay');
+var recBtn = document.getElementById('Recyclable');
+var nrecBtn = document.getElementById('Non-Recyclable');
+var okBtn = document.getElementById('OK');
 
 
 var currElement=document.getElementById('SSB');
@@ -135,7 +135,7 @@ function closeModal(e)
 	{
 		modal.style.display="none";
 		modalBody2.firstElementChild.innerHTML=currElement.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML;
-		modalHeader2.innerHTML="correct!";
+		modalHeader2.innerHTML="Correct!";
 		amtItems -=1;
 		counter.innerHTML=amtItems;
 		conveyor.removeChild(currElement.parentElement); //boxes.length --;
@@ -160,7 +160,7 @@ function closeModal(e)
 		currElement.style.display="block";
 		modal.style.display="none";
 		modalBody2.firstElementChild.innerHTML=currElement.nextElementSibling.nextElementSibling.nextElementSibling.innerHTML;
-		modalHeader2.innerHTML="wrong!";
+		modalHeader2.innerHTML="Incorrect!";
 		modalHeader2.parentElement.style.backgroundColor="red";
 		modalFooter2.style.background="red";
 

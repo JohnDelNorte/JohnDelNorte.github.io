@@ -1,29 +1,41 @@
 body
  {
+  /*background-image: url("images/UCSC-Engineering-09.jpg");*/
   background: black;
-
+  font-family: "Rubik";
   height: 100%;
   width: 100%;
-}
-
-.SSB
-{
-  /* content: url('images/oldBinCopy.jpg'); */
-  position: absolute;
-	top: 0px;
-	left:500px;
-	border: 5px white solid;
   
 }
 
-#extLink
+.SSB /*For Smart Slug Bin Picture*/
 {
-  border: 5px green solid;
-  display: block;
-  position: absolute;
+  /* content: url('images/oldBinCopy.jpg'); */
+  /*position: absolute;
+	top: 0px;
+	left:500px;
+	border: 5px white solid;
+  */
+  position: fixed;
   top: 0px;
-  left: 1100px;
-  padding: 10px;
+  left:325px;
+}
+
+#extLink /*For block linking to website*/
+{
+  /*border: 5px #0000CD solid;*/
+  /*background-color: white;*/
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  background-color: #DAA520;
+  display: block;
+  position: fixed;
+  /*top: 0px;
+  left: 1100px;*/
+  left:310px;
+  bottom:0px;
+  padding: 5px;
+  width: 100%;
 
 }
 #extLink a
@@ -31,7 +43,7 @@ body
   text-align: center;
 }
 
-.box
+.box /* For borders around the conveyor items*/
 {
   position: absolute;
   height: 320px;
@@ -71,7 +83,7 @@ body
 }
 
 .hovered {
-  background: green;
+  background: black;
   border-style: dashed;
 }
 .invisible
@@ -137,18 +149,56 @@ body
     cursor: pointer;
 }
 
-.counter
+.counter /* For counter block */
 {
-  position: absolute;
-  padding:10px;
-  border: 5px solid red;
-  background-color: white;
+  position: fixed;
+  padding:8px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  /*border: 5px solid red;*/
+  /*background-color: white;
+  background-color: #3CB371;
+  opacity: 0.75;*/
   top:0px;
-  left:900px;
+  /*left:900px;*/
+  right:0px;
   display:block;
-
+  text-align: center;
 }
 .counter h3
 {
+  text-align: center;
+}
+
+/*.info h4
+{
+  position: fixed;
+  padding:8px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  top:100px;
+  /*left:900px;
+  right:0px;
+  display:block;
+
+}*/
+
+div.transbox {
+
+  background-color: #ffffff;
+
+  opacity: 0.7;
+  filter: alpha(opacity=60); /* For IE8 and earlier */
+  height:auto;
+  top:0px;
+  right:0px;
+  width: 23%;
+  position: fixed;
+}
+
+div.transbox p {
+  /*font-weight: bold;*/
+  font-size: 18px;
+  color: #000000;
   text-align: center;
 }
