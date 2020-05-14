@@ -198,8 +198,8 @@ div.transbox p {
   border: 5px white solid;
   */
   position: fixed;
-  top: 0px;
-  left:325px;
+  bottom: 0px;
+  left:315px;
 
 .contain {
     object-fit: fill;
