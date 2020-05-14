@@ -202,5 +202,5 @@ div.transbox p {
   left:325px;
 
 .contain {
-    object-fit: contain;
+    object-fit: fill;
 }
