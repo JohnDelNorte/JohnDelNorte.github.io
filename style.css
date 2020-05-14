@@ -19,6 +19,7 @@ body
   position: fixed;
   top: 0px;
   left:325px;
+  object-fit: cover;
 }
 
 #extLink /*For block linking to website*/
