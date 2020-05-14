@@ -18,10 +18,11 @@ body
   font-size: 18px;
   background-color: #DAA520;
   display: block;
-  position: fixed;
+  position: absolute;
+  z-index: 2px;
   /*top: 0px;
   left: 1100px;*/
-  left:310px;
+  left:315px;
   bottom:0px;
   padding: 5px;
   width: 100%;
@@ -198,7 +199,7 @@ div.transbox p {
   border: 5px white solid;
   */
   position: fixed;
-  bottom: 0px;
+  top: 0px;
   left:315px;
 
 .contain {
